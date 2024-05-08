@@ -2,7 +2,7 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
-  testMatch: ["**/src/**/*.test.ts"],
+  rootDir: "dist",
   resolver: "jest-ts-webcompat-resolver",
-  collectCoverageFrom: ["src/**/*.ts", "!src/index.ts", "!src/server/index.ts"],
+  testMatch: ["**/src/**/*.test.ts"],
 };

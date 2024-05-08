@@ -2,7 +2,7 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
-  rootDir: "dist",
+  rootDir: "dist/",
   resolver: "jest-ts-webcompat-resolver",
   testMatch: ["**/src/**/*.test.ts"],
 };

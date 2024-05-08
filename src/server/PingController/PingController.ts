@@ -1,7 +1,10 @@
 import { type Request, type Response } from "express";
+import type PingControllerStructure from "./types";
 
-const pingController = (_req: Request, res: Response) => {
-  res.status(200).json({ message: "Pong" });
-};
+class PingController implements PingControllerStructure {
+  getPong(_req: Request, res: Response) {
+    res.status(200).json({ ping: "🏓 pong" });
+  }
+}
 
-export default pingController;
+export default PingController;

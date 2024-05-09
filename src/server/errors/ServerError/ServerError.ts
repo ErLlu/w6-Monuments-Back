@@ -4,6 +4,5 @@ export class ServerError extends Error {
     public statusCode: number,
   ) {
     super(message);
-    this.statusCode = statusCode;
   }
 }

@@ -1,6 +1,5 @@
 import chalk from "chalk";
-import { type Request, type Response } from "express";
-import { type NextFunction } from "express";
+import { type NextFunction, type Request, type Response } from "express";
 import { ServerError } from "../ServerError/ServerError.js";
 
 export const notFoundError = (
@@ -20,6 +19,6 @@ export const generalError = (
   _next: NextFunction,
 ) => {
   const statusCodeError = error.statusCode ?? 500;
-  console.log(chalk.red(`error: {error.message}`));
-  res.status(statusCodeError).json(`error: ${error.message}`);
+  console.log(chalk.red(`error: ${error.message}`));
+  res.status(statusCodeError).json({ error: error.message });
 };

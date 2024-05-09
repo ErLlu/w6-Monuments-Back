@@ -15,7 +15,7 @@ describe("Given a ping controller", () => {
 
       pingController.getPong(req as Request, res as Response);
 
-      expect(res.json).toHaveBeenCalledWith({ ping: expectedMessagePing });
+      expect(res.json).toHaveBeenCalledWith({ message: expectedMessagePing });
     });
 
     test("Then it should call the response's status method with 200", () => {

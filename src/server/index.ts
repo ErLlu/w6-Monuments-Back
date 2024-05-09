@@ -1,9 +1,13 @@
+import "dotenv/config";
 import express from "express";
+import chalk from "chalk";
 
 export const app = express();
 
-app.listen(8000, () => {
-  console.log("Server listening on 'http://localhost:8000/'");
+const port = process.env.PORT ?? 8000;
+
+app.listen(port, () => {
+  console.log(chalk.blue(`Listening on ${"http://localhost:" + port}`));
 });
 
 export default app;

@@ -1,9 +1,9 @@
 import { type Request, type Response } from "express";
-import type PingControllerStructure from "./types";
+import type PingControllerStructure from "./types.js";
 
 class PingController implements PingControllerStructure {
   getPong(_req: Request, res: Response) {
-    res.status(200).json({ ping: "🏓 pong" });
+    res.status(200).json({ message: "🏓 pong" });
   }
 }
 

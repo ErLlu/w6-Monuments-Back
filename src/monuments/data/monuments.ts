@@ -1,5 +1,4 @@
 import Monument from "../Monument.js";
-import { MonumentStructure } from "../types.js";
 
 const tajMahal = new Monument(
   "Taj Mahal",
